@@ -21,7 +21,7 @@ namespace Calculator
         {
             foreach (char c in s)
             {
-                if (!Char.IsDigit(c) /*&& (c != '.')*/) return false;
+                if (!Char.IsDigit(c) && (c != ',')) return false;
             }
             return true;
         }
