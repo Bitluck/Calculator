@@ -32,9 +32,9 @@
             this.btnDif = new System.Windows.Forms.Button();
             this.btnMult = new System.Windows.Forms.Button();
             this.btnDiv = new System.Windows.Forms.Button();
-            this.mtxtFirst = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtSecond = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtResult = new System.Windows.Forms.MaskedTextBox();
+            this.txtFirst = new System.Windows.Forms.TextBox();
+            this.txtSecond = new System.Windows.Forms.TextBox();
+            this.txtResult = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSum
@@ -47,6 +47,7 @@
             this.btnSum.TabIndex = 1;
             this.btnSum.Text = "+";
             this.btnSum.UseVisualStyleBackColor = true;
+            this.btnSum.Click += new System.EventHandler(this.btnSum_Click);
             // 
             // btnDif
             // 
@@ -58,6 +59,7 @@
             this.btnDif.TabIndex = 2;
             this.btnDif.Text = "-";
             this.btnDif.UseVisualStyleBackColor = true;
+            this.btnDif.Click += new System.EventHandler(this.btnDif_Click);
             // 
             // btnMult
             // 
@@ -69,6 +71,7 @@
             this.btnMult.TabIndex = 3;
             this.btnMult.Text = "*";
             this.btnMult.UseVisualStyleBackColor = true;
+            this.btnMult.Click += new System.EventHandler(this.btnMult_Click);
             // 
             // btnDiv
             // 
@@ -80,46 +83,44 @@
             this.btnDiv.TabIndex = 4;
             this.btnDiv.Text = "/";
             this.btnDiv.UseVisualStyleBackColor = true;
+            this.btnDiv.Click += new System.EventHandler(this.btnDiv_Click);
             // 
-            // mtxtFirst
+            // txtFirst
             // 
-            this.mtxtFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mtxtFirst.Location = new System.Drawing.Point(12, 12);
-            this.mtxtFirst.Mask = "99999999999";
-            this.mtxtFirst.Name = "mtxtFirst";
-            this.mtxtFirst.PromptChar = ' ';
-            this.mtxtFirst.Size = new System.Drawing.Size(198, 29);
-            this.mtxtFirst.TabIndex = 13;
+            this.txtFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtFirst.Location = new System.Drawing.Point(12, 10);
+            this.txtFirst.Name = "txtFirst";
+            this.txtFirst.Size = new System.Drawing.Size(198, 31);
+            this.txtFirst.TabIndex = 16;
+            this.txtFirst.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // mtxtSecond
+            // txtSecond
             // 
-            this.mtxtSecond.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mtxtSecond.Location = new System.Drawing.Point(12, 47);
-            this.mtxtSecond.Mask = "99999999999";
-            this.mtxtSecond.Name = "mtxtSecond";
-            this.mtxtSecond.PromptChar = ' ';
-            this.mtxtSecond.Size = new System.Drawing.Size(198, 29);
-            this.mtxtSecond.TabIndex = 14;
+            this.txtSecond.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtSecond.Location = new System.Drawing.Point(12, 47);
+            this.txtSecond.Name = "txtSecond";
+            this.txtSecond.Size = new System.Drawing.Size(198, 31);
+            this.txtSecond.TabIndex = 17;
+            this.txtSecond.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // mtxtResult
+            // txtResult
             // 
-            this.mtxtResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.mtxtResult.Location = new System.Drawing.Point(12, 82);
-            this.mtxtResult.Mask = "99999999999";
-            this.mtxtResult.Name = "mtxtResult";
-            this.mtxtResult.PromptChar = ' ';
-            this.mtxtResult.ReadOnly = true;
-            this.mtxtResult.Size = new System.Drawing.Size(198, 29);
-            this.mtxtResult.TabIndex = 15;
+            this.txtResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtResult.Location = new System.Drawing.Point(12, 84);
+            this.txtResult.Name = "txtResult";
+            this.txtResult.ReadOnly = true;
+            this.txtResult.Size = new System.Drawing.Size(198, 31);
+            this.txtResult.TabIndex = 18;
+            this.txtResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(218, 171);
-            this.Controls.Add(this.mtxtResult);
-            this.Controls.Add(this.mtxtSecond);
-            this.Controls.Add(this.mtxtFirst);
+            this.Controls.Add(this.txtResult);
+            this.Controls.Add(this.txtSecond);
+            this.Controls.Add(this.txtFirst);
             this.Controls.Add(this.btnDiv);
             this.Controls.Add(this.btnMult);
             this.Controls.Add(this.btnDif);
@@ -138,9 +139,9 @@
         private System.Windows.Forms.Button btnDif;
         private System.Windows.Forms.Button btnMult;
         private System.Windows.Forms.Button btnDiv;
-        private System.Windows.Forms.MaskedTextBox mtxtFirst;
-        private System.Windows.Forms.MaskedTextBox mtxtSecond;
-        private System.Windows.Forms.MaskedTextBox mtxtResult;
+        private System.Windows.Forms.TextBox txtFirst;
+        private System.Windows.Forms.TextBox txtSecond;
+        private System.Windows.Forms.TextBox txtResult;
     }
 }
 
