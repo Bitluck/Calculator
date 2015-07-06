@@ -87,29 +87,29 @@
             // 
             // txtFirst
             // 
-            this.txtFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtFirst.Location = new System.Drawing.Point(12, 10);
             this.txtFirst.Name = "txtFirst";
-            this.txtFirst.Size = new System.Drawing.Size(198, 31);
+            this.txtFirst.Size = new System.Drawing.Size(198, 29);
             this.txtFirst.TabIndex = 16;
             this.txtFirst.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtSecond
             // 
-            this.txtSecond.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtSecond.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtSecond.Location = new System.Drawing.Point(12, 47);
             this.txtSecond.Name = "txtSecond";
-            this.txtSecond.Size = new System.Drawing.Size(198, 31);
+            this.txtSecond.Size = new System.Drawing.Size(198, 29);
             this.txtSecond.TabIndex = 17;
             this.txtSecond.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtResult
             // 
-            this.txtResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtResult.Location = new System.Drawing.Point(12, 84);
             this.txtResult.Name = "txtResult";
             this.txtResult.ReadOnly = true;
-            this.txtResult.Size = new System.Drawing.Size(198, 31);
+            this.txtResult.Size = new System.Drawing.Size(198, 29);
             this.txtResult.TabIndex = 18;
             this.txtResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
