@@ -79,8 +79,8 @@ namespace Calc
 
         private void Calculate(object sender, EventArgs e)
         {
-            double dArg1 = Convert.ToDouble(txtFirst.Text);
-            double dArg2 = Convert.ToDouble(txtSecond.Text);
+            double dArg1 = Double.Parse(txtFirst.Text);
+            double dArg2 = Double.Parse(txtSecond.Text);
             double dResult = 0;
 
             switch (((Button)sender).Name.Substring(isubIndex))
@@ -109,7 +109,7 @@ namespace Calc
                 default:
                     throw new Exception("Not an operation.");
             }
-            txtResult.Text = Convert.ToString(dResult);
+            txtResult.Text = dResult.ToString();
         }
 
         private void ButtonSumClick(object sender, EventArgs e)

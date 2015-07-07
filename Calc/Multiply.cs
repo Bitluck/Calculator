@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Calc
 {
-    class Difference:BinaryOperation
+    class Multiply : BinaryOperation
     {
         public override double Calculate(double dArg1, double dArg2)
         {
-            return (dArg1 + dArg2);
+            return (dArg1 * dArg2);
         }
     }
 }
