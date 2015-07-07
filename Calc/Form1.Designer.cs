@@ -33,7 +33,7 @@
             this.btnDifference = new System.Windows.Forms.Button();
             this.btnMultiply = new System.Windows.Forms.Button();
             this.btnDivide = new System.Windows.Forms.Button();
-            this.btnQuest = new System.Windows.Forms.Button();
+            this.btnSin = new System.Windows.Forms.Button();
             this.btnSortMass = new System.Windows.Forms.Button();
             this.txtSecond = new System.Windows.Forms.TextBox();
             this.txtResult = new System.Windows.Forms.TextBox();
@@ -93,16 +93,16 @@
             this.btnDivide.UseVisualStyleBackColor = true;
             this.btnDivide.Click += new System.EventHandler(this.btnDivide_Click);
             // 
-            // btnQuest
+            // btnSin
             // 
-            this.btnQuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnQuest.Location = new System.Drawing.Point(134, 123);
-            this.btnQuest.Name = "btnQuest";
-            this.btnQuest.Size = new System.Drawing.Size(55, 55);
-            this.btnQuest.TabIndex = 6;
-            this.btnQuest.Text = "?";
-            this.btnQuest.UseVisualStyleBackColor = true;
-            this.btnQuest.Click += new System.EventHandler(this.btnQuest_Click);
+            this.btnSin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSin.Location = new System.Drawing.Point(134, 123);
+            this.btnSin.Name = "btnSin";
+            this.btnSin.Size = new System.Drawing.Size(55, 55);
+            this.btnSin.TabIndex = 6;
+            this.btnSin.Text = "sin";
+            this.btnSin.UseVisualStyleBackColor = true;
+            this.btnSin.Click += new System.EventHandler(this.btnSin_Click);
             // 
             // btnSortMass
             // 
@@ -144,7 +144,7 @@
             this.Controls.Add(this.txtResult);
             this.Controls.Add(this.txtSecond);
             this.Controls.Add(this.btnSortMass);
-            this.Controls.Add(this.btnQuest);
+            this.Controls.Add(this.btnSin);
             this.Controls.Add(this.btnDivide);
             this.Controls.Add(this.btnMultiply);
             this.Controls.Add(this.btnDifference);
@@ -154,6 +154,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,7 +167,7 @@
         private System.Windows.Forms.Button btnDifference;
         private System.Windows.Forms.Button btnMultiply;
         private System.Windows.Forms.Button btnDivide;
-        private System.Windows.Forms.Button btnQuest;
+        private System.Windows.Forms.Button btnSin;
         private System.Windows.Forms.Button btnSortMass;
         private System.Windows.Forms.TextBox txtSecond;
         private System.Windows.Forms.TextBox txtResult;

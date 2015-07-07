@@ -55,7 +55,7 @@ namespace Calc
             }
         }
 
-        private string calculate(string sfirst, string ssecond, string sname)
+        /*private string calculate(string sarg1, string sarg2, string sname)
         {
             switch (sname)
             {
@@ -75,42 +75,76 @@ namespace Calc
                     return sname;
             }
             //return "";
+        }*/
+
+        private void Calculate(object sender, EventArgs e)
+        {
+            double dArg1 = Convert.ToDouble(txtFirst.Text);
+            double dArg2 = Convert.ToDouble(txtSecond.Text);
+            double dResult = 0;
+
+            switch (((Button)sender).Name.Substring(isubIndex))
+            {
+                case "Sum":
+                    dResult = dArg1 + dArg2;
+                    break;
+                case "Difference":
+                    dResult = dArg1 - dArg2;
+                    break;
+                case "Multiply":
+                    dResult = dArg1 * dArg2;
+                    break;
+                case "Divide":
+                    if(dArg2 == 0)
+                        throw new Exception("Divide by zero.");
+                    else
+                        dResult = dArg1 / dArg2;
+                    break;
+                case "Sin":
+                    dResult = Math.Sin(dArg1);
+                    break;
+                case "SortMass":
+                    dResult = 0;
+                    break;
+                default:
+                    throw new Exception("Not an operation.");
+            }
+            txtResult.Text = Convert.ToString(dResult);
         }
         
         private void btnSum_Click(object sender, EventArgs e)
         {
-            txtResult.Text = calculate(txtFirst.Text, txtSecond.Text,
-                                      ((Button)sender).Name.Substring(isubIndex));
+            Calculate(sender, e);
         }
 
         private void btnDifference_Click(object sender, EventArgs e)
         {
-            txtResult.Text = calculate(txtFirst.Text, txtSecond.Text,
-                                      ((Button)sender).Name.Substring(isubIndex));
+            Calculate(sender, e);
         }
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
-            txtResult.Text = calculate(txtFirst.Text, txtSecond.Text,
-                                      ((Button)sender).Name.Substring(isubIndex));
+            Calculate(sender, e);
         }
 
         private void btnDivide_Click(object sender, EventArgs e)
         {
-            txtResult.Text = calculate(txtFirst.Text, txtSecond.Text,
-                                      ((Button)sender).Name.Substring(isubIndex));
+            Calculate(sender, e);
         }
 
-        private void btnQuest_Click(object sender, EventArgs e)
+        private void btnSin_Click(object sender, EventArgs e)
         {
-            txtResult.Text = calculate(txtFirst.Text, txtSecond.Text,
-                                      ((Button)sender).Name.Substring(isubIndex));
+            Calculate(sender, e);
         }
 
         private void btnSortMass_Click(object sender, EventArgs e)
         {
-            txtResult.Text = calculate(txtFirst.Text, txtSecond.Text,
-                                      ((Button)sender).Name.Substring(isubIndex));
+            Calculate(sender, e);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
