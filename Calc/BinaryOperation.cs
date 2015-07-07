@@ -2,6 +2,6 @@
 {
     public interface IBinaryOperation
     {
-        double Calculate(double dArg1, double dArg2);
+        double Calculate(double firstArgument, double secondArgument);
     }
 }

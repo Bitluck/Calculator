@@ -8,8 +8,10 @@ namespace Calc
         {
             switch (calculator)
             {
-                case "Sin": return new Sin();
-                default: throw new Exception("Unknown Operation!");
+                case "Sin": 
+                    return new Sin();
+                default: 
+                    throw new Exception("Unknown Operation!");
             }
         }
     }

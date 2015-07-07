@@ -4,9 +4,9 @@ namespace Calc
 {
     class Sin : IOperation
     {
-        public double Calculate(double dArg)
+        public double Calculate(double argument)
         {
-            return (Math.Sin(dArg));
+            return (Math.Sin(argument));
         }
     }
 }

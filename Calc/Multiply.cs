@@ -2,9 +2,9 @@
 {
     class Multiply : IBinaryOperation
     {
-        public double Calculate(double dArg1, double dArg2)
+        public double Calculate(double firstArgument, double secondArgument)
         {
-            return (dArg1 * dArg2);
+            return (firstArgument * secondArgument);
         }
     }
 }
