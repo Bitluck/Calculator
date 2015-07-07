@@ -25,7 +25,7 @@ namespace Calc
             return false;
         }
 
-        private void txtFirst_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtFirstKeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && (e.KeyChar != ',') &&
                 (e.KeyChar != '.')       && (e.KeyChar != (char)Keys.Back))
@@ -40,7 +40,7 @@ namespace Calc
             }
         }
 
-        private void txtSecond_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSecondKeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && (e.KeyChar != ',') && 
                 (e.KeyChar != '.')       && (e.KeyChar != (char)Keys.Back))
@@ -111,38 +111,38 @@ namespace Calc
             }
             txtResult.Text = Convert.ToString(dResult);
         }
-        
-        private void btnSum_Click(object sender, EventArgs e)
+
+        private void ButtonSumClick(object sender, EventArgs e)
         {
             Calculate(sender, e);
         }
 
-        private void btnDifference_Click(object sender, EventArgs e)
+        private void ButtonDifferenceClick(object sender, EventArgs e)
         {
             Calculate(sender, e);
         }
 
-        private void btnMultiply_Click(object sender, EventArgs e)
+        private void ButtonMultiplyClick(object sender, EventArgs e)
         {
             Calculate(sender, e);
         }
 
-        private void btnDivide_Click(object sender, EventArgs e)
+        private void ButtonDivideClick(object sender, EventArgs e)
         {
             Calculate(sender, e);
         }
 
-        private void btnSin_Click(object sender, EventArgs e)
+        private void ButtonSinClick(object sender, EventArgs e)
         {
             Calculate(sender, e);
         }
 
-        private void btnSortMass_Click(object sender, EventArgs e)
+        private void ButtonSortMassClick(object sender, EventArgs e)
         {
             Calculate(sender, e);
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void MainFormLoad(object sender, EventArgs e)
         {
 
         }

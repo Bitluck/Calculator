@@ -47,7 +47,7 @@
             this.txtFirst.Size = new System.Drawing.Size(178, 31);
             this.txtFirst.TabIndex = 0;
             this.txtFirst.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtFirst.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirst_KeyPress);
+            this.txtFirst.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstKeyPress);
             // 
             // btnSum
             // 
@@ -58,7 +58,7 @@
             this.btnSum.TabIndex = 2;
             this.btnSum.Text = "+";
             this.btnSum.UseVisualStyleBackColor = true;
-            this.btnSum.Click += new System.EventHandler(this.btnSum_Click);
+            this.btnSum.Click += new System.EventHandler(this.ButtonSumClick);
             // 
             // btnDifference
             // 
@@ -69,7 +69,7 @@
             this.btnDifference.TabIndex = 3;
             this.btnDifference.Text = "-";
             this.btnDifference.UseVisualStyleBackColor = true;
-            this.btnDifference.Click += new System.EventHandler(this.btnDifference_Click);
+            this.btnDifference.Click += new System.EventHandler(this.ButtonDifferenceClick);
             // 
             // btnMultiply
             // 
@@ -80,7 +80,7 @@
             this.btnMultiply.TabIndex = 4;
             this.btnMultiply.Text = "*";
             this.btnMultiply.UseVisualStyleBackColor = true;
-            this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
+            this.btnMultiply.Click += new System.EventHandler(this.ButtonMultiplyClick);
             // 
             // btnDivide
             // 
@@ -91,7 +91,7 @@
             this.btnDivide.TabIndex = 5;
             this.btnDivide.Text = "/";
             this.btnDivide.UseVisualStyleBackColor = true;
-            this.btnDivide.Click += new System.EventHandler(this.btnDivide_Click);
+            this.btnDivide.Click += new System.EventHandler(this.ButtonDivideClick);
             // 
             // btnSin
             // 
@@ -102,7 +102,7 @@
             this.btnSin.TabIndex = 6;
             this.btnSin.Text = "sin";
             this.btnSin.UseVisualStyleBackColor = true;
-            this.btnSin.Click += new System.EventHandler(this.btnSin_Click);
+            this.btnSin.Click += new System.EventHandler(this.ButtonSinClick);
             // 
             // btnSortMass
             // 
@@ -113,7 +113,7 @@
             this.btnSortMass.TabIndex = 7;
             this.btnSortMass.Text = "Sort";
             this.btnSortMass.UseVisualStyleBackColor = true;
-            this.btnSortMass.Click += new System.EventHandler(this.btnSortMass_Click);
+            this.btnSortMass.Click += new System.EventHandler(this.ButtonSortMassClick);
             // 
             // txtSecond
             // 
@@ -123,7 +123,7 @@
             this.txtSecond.Size = new System.Drawing.Size(178, 31);
             this.txtSecond.TabIndex = 1;
             this.txtSecond.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtSecond.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSecond_KeyPress);
+            this.txtSecond.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSecondKeyPress);
             // 
             // txtResult
             // 
@@ -154,7 +154,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
-            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Load += new System.EventHandler(this.MainFormLoad);
             this.ResumeLayout(false);
             this.PerformLayout();
 
