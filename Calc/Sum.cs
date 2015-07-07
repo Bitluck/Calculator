@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calc
 {
-    class Difference:BinaryOperation
+    class Difference:IBinaryOperation
     {
         public override double Calculate(double dArg1, double dArg2)
         {

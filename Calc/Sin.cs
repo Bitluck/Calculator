@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calc
 {
-    class Sin : Operation
+    class Sin : IOperation
     {
         public override double Calculate(double dArg)
         {

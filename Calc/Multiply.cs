@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calc
 {
-    class Multiply : BinaryOperation
+    class Multiply : IBinaryOperation
     {
         public override double Calculate(double dArg1, double dArg2)
         {

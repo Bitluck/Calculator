@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Calc
 {
-    public abstract class BinaryOperation
+    interface IBinaryOperation
     {
         public abstract double Calculate(double dArg1, double dArg2);
     }

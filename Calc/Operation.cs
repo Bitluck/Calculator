@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Calc
 {
-    public abstract class Operation
+    interface IOperation
     {
         public abstract double Calculate(double dArg);
     }
