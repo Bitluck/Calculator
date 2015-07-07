@@ -4,7 +4,7 @@ namespace Calc
 {
     public static class BinaryFactory
     {
-        public static IBinaryOperation CreateBinaryCalculate(string calculator)
+        public static IBinaryOperation CreateBinaryCalculator(string calculator)
         {
             switch (calculator)
             {

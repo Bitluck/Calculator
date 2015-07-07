@@ -4,7 +4,7 @@ namespace Calc
 {
     public static class Factory
     {
-        public static IOperation CreateCalculate(string calculator)
+        public static IOperation CreateCalculator(string calculator)
         {
             switch (calculator)
             {

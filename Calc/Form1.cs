@@ -10,7 +10,7 @@ namespace Calc
         {
             InitializeComponent();
         }
-
+        
         private bool IsPoint(char c)
         {
             if (c == '.' || c == ',')
@@ -47,17 +47,17 @@ namespace Calc
                     e.Handled = true;
             }
         }
-
+        
         private void UnaryOperation(object sender, EventArgs e)
         {
-            var calc = Factory.CreateCalculate(((Button) sender).Name.Substring(3));
-            var dArg = Convert.ToDouble(txtFirst.Text);
-            txtResult.Text = calc.Calculate(dArg).ToString();
+            var calculator = Factory.CreateCalculator(((Button)sender).Name.Substring(3));
+            var argument = Convert.ToDouble(txtFirst.Text);
+            txtResult.Text = calculator.Calculate(argument).ToString();
         }
 
         private void BinaryOperation(object sender, EventArgs e)
         {
-            var calculator = BinaryFactory.CreateBinaryCalculate(((Button) sender).Name.Substring(3));
+            var calculator = BinaryFactory.CreateBinaryCalculator(((Button) sender).Name.Substring(3));
             var firstArgument = Convert.ToDouble(txtFirst.Text);
             var secondArgument = Convert.ToDouble(txtSecond.Text);
             txtResult.Text = calculator.Calculate(firstArgument, secondArgument).ToString();
