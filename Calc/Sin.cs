@@ -8,7 +8,7 @@ namespace Calc
 {
     class Sin : IOperation
     {
-        public override double Calculate(double dArg)
+        public double Calculate(double dArg)
         {
             return (Math.Sin(dArg));
         }

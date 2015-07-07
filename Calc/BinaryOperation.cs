@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Calc
 {
-    interface IBinaryOperation
+    public interface IBinaryOperation
     {
-        public abstract double Calculate(double dArg1, double dArg2);
+        double Calculate(double dArg1, double dArg2);
     }
 }

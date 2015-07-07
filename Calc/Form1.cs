@@ -55,91 +55,49 @@ namespace Calc
             }
         }
 
-        /*private string calculate(string sarg1, string sarg2, string sname)
+        private void unaryOperation(string calcFunc)
         {
-            switch (sname)
-            {
-                case "Sum":
-                    return "Sum";
-                case "Diference":
-                    return "Diference";
-                case "Multiply":
-                    return "Multiply";
-                case "Divide":
-                    return "Divide";
-                case "?":
-                    return "?";
-                case "Sort":
-                    return "Sort";
-                default:
-                    return sname;
-            }
-            //return "";
-        }*/
+            IOperation calc = Factory.CreateCalculate(calcFunc);
+            double dArg = Convert.ToDouble(txtFirst.Text);
+            txtResult.Text = calc.Calculate(dArg).ToString();
+        }
 
-        private void Calculate(object sender, EventArgs e)
+        private void binaryOperation(string calcFunc)
         {
-            double dArg1 = Double.Parse(txtFirst.Text);
-            double dArg2 = Double.Parse(txtSecond.Text);
-            double dResult = 0;
-
-            switch (((Button)sender).Name.Substring(isubIndex))
-            {
-                case "Sum":
-                    dResult = dArg1 + dArg2;
-                    break;
-                case "Difference":
-                    dResult = dArg1 - dArg2;
-                    break;
-                case "Multiply":
-                    dResult = dArg1 * dArg2;
-                    break;
-                case "Divide":
-                    if(dArg2 == 0)
-                        throw new Exception("Divide by zero.");
-                    else
-                        dResult = dArg1 / dArg2;
-                    break;
-                case "Sin":
-                    dResult = Math.Sin(dArg1);
-                    break;
-                case "SortMass":
-                    dResult = 0;
-                    break;
-                default:
-                    throw new Exception("Not an operation.");
-            }
-            txtResult.Text = dResult.ToString();
+            IBinaryOperation calc = BinaryFactory.CreateBinaryCalculate(calcFunc);
+            double dArg1 = Convert.ToDouble(txtFirst.Text);
+            double dArg2 = Convert.ToDouble(txtSecond.Text);
+            txtResult.Text = calc.Calculate(dArg1, dArg2).ToString();
         }
 
         private void ButtonSumClick(object sender, EventArgs e)
         {
-            Calculate(sender, e);
+            binaryOperation("+");
         }
 
         private void ButtonDifferenceClick(object sender, EventArgs e)
         {
-            Calculate(sender, e);
+            binaryOperation("-");
         }
 
         private void ButtonMultiplyClick(object sender, EventArgs e)
         {
-            Calculate(sender, e);
+            binaryOperation("*");
         }
 
         private void ButtonDivideClick(object sender, EventArgs e)
         {
-            Calculate(sender, e);
+            binaryOperation("/");
         }
 
         private void ButtonSinClick(object sender, EventArgs e)
         {
-            Calculate(sender, e);
+            unaryOperation("Sin");
         }
 
         private void ButtonSortMassClick(object sender, EventArgs e)
         {
-            Calculate(sender, e);
+            binaryOperation("Sort");
         }
 
         private void MainFormLoad(object sender, EventArgs e)

@@ -12,10 +12,10 @@ namespace Calc
         {
             switch (calculator)
             {
-                case "Sum": return new Difference();
-                case "Difference": return new Difference();
-                case "Multiply": return new Multiply();
-                case "Divide": return new Divide();
+                case "Sum": case "+": return new Sum();
+                case "Difference": case "-": return new Difference();
+                case "Multiply": case "*": return new Multiply();
+                case "Divide": case"/": return new Divide();
                 default: throw new Exception("Unknown Operation!");
             }
         }
