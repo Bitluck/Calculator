@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace Calc
+namespace Calc.operations.unary
 {
     public class Sin : IOperation
     {
         public double Calculate(double argument)
         {
-            return (Math.Sin(argument));
+            return Math.Sin(argument);
         }
     }
 }

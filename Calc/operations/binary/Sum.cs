@@ -1,4 +1,4 @@
-﻿namespace Calc
+﻿namespace Calc.operations.binary
 {
     public class Sum : IBinaryOperation
     {

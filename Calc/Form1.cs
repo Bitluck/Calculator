@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using Calc.factories;
 
 namespace Calc
 {
@@ -67,7 +68,7 @@ namespace Calc
         
         private void UnaryOperation(object sender, EventArgs e)
         {
-            var calculatorName = ((Button) sender).Name.Substring(3);
+            var calculatorName = ((Button) sender).Name.Substring(6);
             var calculator = Factory.CreateCalculator(calculatorName);
             var argument = Convert.ToDouble(txtFirst.Text);
             txtResult.Text = calculator.Calculate(argument).ToString();
@@ -75,7 +76,7 @@ namespace Calc
 
         private void BinaryOperation(object sender, EventArgs e)
         {
-            var calculatorName = ((Button)sender).Name.Substring(3);
+            var calculatorName = ((Button)sender).Name.Substring(6);
             var calculator = BinaryFactory.CreateBinaryCalculator(calculatorName);
             var firstArgument = Convert.ToDouble(txtFirst.Text);
             var secondArgument = Convert.ToDouble(txtSecond.Text);

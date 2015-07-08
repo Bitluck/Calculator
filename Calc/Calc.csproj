@@ -45,8 +45,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinaryOperation.cs" />
-    <Compile Include="operations\Difference.cs" />
-    <Compile Include="operations\Divide.cs" />
+    <Compile Include="operations\binary\DecimalDivide.cs" />
+    <Compile Include="operations\binary\Log.cs" />
+    <Compile Include="operations\binary\Max.cs" />
+    <Compile Include="operations\binary\Min.cs" />
+    <Compile Include="operations\binary\Mod.cs" />
+    <Compile Include="operations\unary\Abs.cs" />
+    <Compile Include="operations\unary\aCos.cs" />
+    <Compile Include="operations\unary\Actg.cs" />
+    <Compile Include="operations\unary\aSin.cs" />
+    <Compile Include="operations\unary\Atan.cs" />
+    <Compile Include="operations\unary\Cos.cs" />
+    <Compile Include="operations\binary\Difference.cs" />
+    <Compile Include="operations\binary\Divide.cs" />
     <Compile Include="factories\BinaryFactory.cs" />
     <Compile Include="factories\Factory.cs" />
     <Compile Include="Form1.cs">
@@ -55,12 +66,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="operations\Multiply.cs" />
+    <Compile Include="operations\binary\Multiply.cs" />
     <Compile Include="Operation.cs" />
+    <Compile Include="operations\binary\Pow.cs" />
+    <Compile Include="operations\unary\Ctg.cs" />
+    <Compile Include="operations\unary\Ln.cs" />
+    <Compile Include="operations\unary\Tan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="operations\Sin.cs" />
-    <Compile Include="operations\Sum.cs" />
+    <Compile Include="operations\unary\Sin.cs" />
+    <Compile Include="operations\binary\Sum.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
