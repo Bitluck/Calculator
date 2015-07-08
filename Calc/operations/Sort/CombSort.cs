@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Calc.Operations.Sort
+{
+    public class CombSort : ISortOperation
+    {
+        public void Calculate(List<Int32> list)
+        {
+            double gap = list.Count;
+            bool swaps = true;
+            while (gap > 1 || swaps)
+            {
+                gap /= 1.247330950103979;
+                if (gap < 1) { gap = 1; }
+                int i = 0;
+                swaps = false;
+                while (i + gap < list.Count)
+                {
+                    int igap = i + (int)gap;
+                    if (list[i] > list[igap])
+                    {
+                        int swap = list[i];
+                        list[i] = list[igap];
+                        list[igap] = swap;
+                        swaps = true;
+                    }
+                    i++;
+                }
+            }
+        }
+    }
+}
