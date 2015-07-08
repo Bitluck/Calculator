@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
-using Calc;
+using Calc.operations.binary;
+using Calc.operations.unary;
 
 namespace Calc.Tests
 {
@@ -17,7 +14,7 @@ namespace Calc.Tests
         [TestCase(0, 19, 19)]
         public void SumTest(double firstArgument, double secondArgument, double result)
         {
-            var calculator = new Calc.Sum();
+            var calculator = new Sum();
             var testResult = calculator.Calculate(firstArgument, secondArgument);
             Assert.AreEqual(result, testResult);
         }
@@ -27,7 +24,7 @@ namespace Calc.Tests
         [TestCase(0, -2, 2)]
         public void DifferenceTest(double firstArgument, double secondArgument, double result)
         {
-            var calculator = new Calc.Difference();
+            var calculator = new Difference();
             var testResult = calculator.Calculate(firstArgument, secondArgument);
             Assert.AreEqual(result, testResult);
         }
@@ -37,7 +34,7 @@ namespace Calc.Tests
         [TestCase(0, 29, 0)]
         public void MultiplyTest(double firstArgument, double secondArgument, double result)
         {
-            var calculator = new Calc.Multiply();
+            var calculator = new Multiply();
             var testResult = calculator.Calculate(firstArgument, secondArgument);
             Assert.AreEqual(result, testResult);
         }
@@ -47,16 +44,31 @@ namespace Calc.Tests
         [TestCase(18, 0, double.PositiveInfinity)]
         public void DivideTest(double firstArgument, double secondArgument, double result)
         {
-            var calculator = new Calc.Divide();
+            var calculator = new Divide();
             var testResult = calculator.Calculate(firstArgument, secondArgument);
             Assert.AreEqual(result, testResult);
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         [TestCase(0, 0)]
         [TestCase(Math.PI/2.0, 1)]
         public void SinTest(double argument, double result)
         {
-            var calculator = new Calc.Sin();
+            var calculator = new Sin();
             var testResult = calculator.Calculate(argument);
             Assert.AreEqual(result, testResult);
         }
