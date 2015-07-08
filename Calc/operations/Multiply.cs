@@ -1,10 +1,10 @@
 ﻿namespace Calc
 {
-    class Sum : IBinaryOperation
+    public class Multiply : IBinaryOperation
     {
         public double Calculate(double firstArgument, double secondArgument)
         {
-            return (firstArgument + secondArgument);
+            return (firstArgument * secondArgument);
         }
     }
 }

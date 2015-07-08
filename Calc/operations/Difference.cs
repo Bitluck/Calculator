@@ -1,10 +1,10 @@
 ﻿namespace Calc
 {
-    class Multiply : IBinaryOperation
+    public class Difference : IBinaryOperation
     {
         public double Calculate(double firstArgument, double secondArgument)
         {
-            return (firstArgument * secondArgument);
+            return (firstArgument - secondArgument);
         }
     }
 }

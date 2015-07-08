@@ -18,10 +18,17 @@ namespace Calc
             return false;
         }
 
+        private bool IsMinus(char c)
+        {
+            if (c == '-')
+                return true;
+            return false;
+        }
+
         private void TxtFirstKeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && (e.KeyChar != ',') &&
-                (e.KeyChar != '.') && (e.KeyChar != (char) Keys.Back))
+                (e.KeyChar != '.') && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != '-'))
             {
                 e.Handled = true;
             }
@@ -31,12 +38,17 @@ namespace Calc
                 if (txtFirst.Text.Count(IsPoint) > 0 || txtFirst.Text == "")
                     e.Handled = true;
             }
+            else if (e.KeyChar == '-')
+            {
+                if (txtFirst.Text.Count(IsMinus) > 0 || txtFirst.Text != "")
+                    e.Handled = true;
+            }
         }
 
         private void TxtSecondKeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && (e.KeyChar != ',') &&
-                (e.KeyChar != '.') && (e.KeyChar != (char) Keys.Back))
+                (e.KeyChar != '.') && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != '-'))
             {
                 e.Handled = true;
             }
@@ -44,6 +56,11 @@ namespace Calc
             {
                 e.KeyChar = ',';
                 if (txtSecond.Text.Count(IsPoint) > 0 || txtSecond.Text == "")
+                    e.Handled = true;
+            }
+            else if (e.KeyChar == '-')
+            {
+                if (txtSecond.Text.Count(IsMinus) > 0 || txtSecond.Text != "")
                     e.Handled = true;
             }
         }
