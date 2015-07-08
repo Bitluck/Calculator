@@ -56,10 +56,10 @@ namespace Calc
             this.buttonLog = new System.Windows.Forms.Button();
             this.buttonMax = new System.Windows.Forms.Button();
             this.buttonMin = new System.Windows.Forms.Button();
-            this.buttonSort1 = new System.Windows.Forms.Button();
-            this.buttonSort2 = new System.Windows.Forms.Button();
-            this.buttonSort3 = new System.Windows.Forms.Button();
-            this.buttonSort4 = new System.Windows.Forms.Button();
+            this.buttonPancakeSort = new System.Windows.Forms.Button();
+            this.buttonInsertionSort = new System.Windows.Forms.Button();
+            this.buttonGnomeSort = new System.Windows.Forms.Button();
+            this.buttonCombSort = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtFirst
@@ -67,10 +67,9 @@ namespace Calc
             this.txtFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtFirst.Location = new System.Drawing.Point(12, 12);
             this.txtFirst.Name = "txtFirst";
-            this.txtFirst.Size = new System.Drawing.Size(270, 31);
+            this.txtFirst.Size = new System.Drawing.Size(288, 31);
             this.txtFirst.TabIndex = 0;
             this.txtFirst.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtFirst.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtFirstKeyPress);
             // 
             // buttonSum
             // 
@@ -144,10 +143,9 @@ namespace Calc
             this.txtSecond.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtSecond.Location = new System.Drawing.Point(12, 49);
             this.txtSecond.Name = "txtSecond";
-            this.txtSecond.Size = new System.Drawing.Size(270, 31);
+            this.txtSecond.Size = new System.Drawing.Size(288, 31);
             this.txtSecond.TabIndex = 1;
             this.txtSecond.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtSecond.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSecondKeyPress);
             // 
             // txtResult
             // 
@@ -156,7 +154,7 @@ namespace Calc
             this.txtResult.Location = new System.Drawing.Point(12, 86);
             this.txtResult.Name = "txtResult";
             this.txtResult.ReadOnly = true;
-            this.txtResult.Size = new System.Drawing.Size(270, 31);
+            this.txtResult.Size = new System.Drawing.Size(288, 31);
             this.txtResult.TabIndex = 100;
             this.txtResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -314,53 +312,57 @@ namespace Calc
             this.buttonMin.UseVisualStyleBackColor = true;
             this.buttonMin.Click += new System.EventHandler(this.BinaryOperation);
             // 
-            // buttonSort1
+            // buttonPancakeSort
             // 
-            this.buttonSort1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSort1.Location = new System.Drawing.Point(242, 123);
-            this.buttonSort1.Name = "buttonSort1";
-            this.buttonSort1.Size = new System.Drawing.Size(40, 40);
-            this.buttonSort1.TabIndex = 115;
-            this.buttonSort1.Text = "Sort1";
-            this.buttonSort1.UseVisualStyleBackColor = true;
+            this.buttonPancakeSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonPancakeSort.Location = new System.Drawing.Point(242, 123);
+            this.buttonPancakeSort.Name = "buttonPancakeSort";
+            this.buttonPancakeSort.Size = new System.Drawing.Size(58, 40);
+            this.buttonPancakeSort.TabIndex = 115;
+            this.buttonPancakeSort.Text = "Pancake\r\nSort";
+            this.buttonPancakeSort.UseVisualStyleBackColor = true;
+            this.buttonPancakeSort.Click += new System.EventHandler(this.SortOperation);
             // 
-            // buttonSort2
+            // buttonInsertionSort
             // 
-            this.buttonSort2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSort2.Location = new System.Drawing.Point(242, 169);
-            this.buttonSort2.Name = "buttonSort2";
-            this.buttonSort2.Size = new System.Drawing.Size(40, 40);
-            this.buttonSort2.TabIndex = 116;
-            this.buttonSort2.Text = "Sort2";
-            this.buttonSort2.UseVisualStyleBackColor = true;
+            this.buttonInsertionSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonInsertionSort.Location = new System.Drawing.Point(242, 169);
+            this.buttonInsertionSort.Name = "buttonInsertionSort";
+            this.buttonInsertionSort.Size = new System.Drawing.Size(58, 40);
+            this.buttonInsertionSort.TabIndex = 116;
+            this.buttonInsertionSort.Text = "Insertion\r\nSort";
+            this.buttonInsertionSort.UseVisualStyleBackColor = true;
+            this.buttonInsertionSort.Click += new System.EventHandler(this.SortOperation);
             // 
-            // buttonSort3
+            // buttonGnomeSort
             // 
-            this.buttonSort3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSort3.Location = new System.Drawing.Point(242, 215);
-            this.buttonSort3.Name = "buttonSort3";
-            this.buttonSort3.Size = new System.Drawing.Size(40, 40);
-            this.buttonSort3.TabIndex = 117;
-            this.buttonSort3.Text = "Sort3";
-            this.buttonSort3.UseVisualStyleBackColor = true;
+            this.buttonGnomeSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonGnomeSort.Location = new System.Drawing.Point(242, 215);
+            this.buttonGnomeSort.Name = "buttonGnomeSort";
+            this.buttonGnomeSort.Size = new System.Drawing.Size(58, 40);
+            this.buttonGnomeSort.TabIndex = 117;
+            this.buttonGnomeSort.Text = "Gnome\nSort";
+            this.buttonGnomeSort.UseVisualStyleBackColor = true;
+            this.buttonGnomeSort.Click += new System.EventHandler(this.SortOperation);
             // 
-            // buttonSort4
+            // buttonCombSort
             // 
-            this.buttonSort4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSort4.Location = new System.Drawing.Point(242, 261);
-            this.buttonSort4.Name = "buttonSort4";
-            this.buttonSort4.Size = new System.Drawing.Size(40, 40);
-            this.buttonSort4.TabIndex = 118;
-            this.buttonSort4.Text = "Sort4";
-            this.buttonSort4.UseVisualStyleBackColor = true;
+            this.buttonCombSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonCombSort.Location = new System.Drawing.Point(242, 261);
+            this.buttonCombSort.Name = "buttonCombSort";
+            this.buttonCombSort.Size = new System.Drawing.Size(58, 40);
+            this.buttonCombSort.TabIndex = 118;
+            this.buttonCombSort.Text = "Comb\nSort";
+            this.buttonCombSort.UseVisualStyleBackColor = true;
+            this.buttonCombSort.Click += new System.EventHandler(this.SortOperation);
             // 
             // MainForm
             // 
-            this.ClientSize = new System.Drawing.Size(302, 315);
-            this.Controls.Add(this.buttonSort4);
-            this.Controls.Add(this.buttonSort3);
-            this.Controls.Add(this.buttonSort2);
-            this.Controls.Add(this.buttonSort1);
+            this.ClientSize = new System.Drawing.Size(312, 315);
+            this.Controls.Add(this.buttonCombSort);
+            this.Controls.Add(this.buttonGnomeSort);
+            this.Controls.Add(this.buttonInsertionSort);
+            this.Controls.Add(this.buttonPancakeSort);
             this.Controls.Add(this.buttonMin);
             this.Controls.Add(this.buttonMax);
             this.Controls.Add(this.buttonLog);
@@ -419,10 +421,10 @@ namespace Calc
         private Button buttonLog;
         private Button buttonMax;
         private Button buttonMin;
-        private Button buttonSort1;
-        private Button buttonSort2;
-        private Button buttonSort3;
-        private Button buttonSort4;
+        private Button buttonPancakeSort;
+        private Button buttonInsertionSort;
+        private Button buttonGnomeSort;
+        private Button buttonCombSort;
     }
 }
 

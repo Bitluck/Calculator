@@ -52,6 +52,7 @@
     <Compile Include="Operations\Binary\MultiplyTests.cs" />
     <Compile Include="Operations\Binary\PowTests.cs" />
     <Compile Include="Operations\Binary\SumTests.cs" />
+    <Compile Include="Operations\Sort\PancakeSortTests.cs" />
     <Compile Include="Operations\Unary\AbsTests.cs" />
     <Compile Include="Operations\Unary\ACosTests.cs" />
     <Compile Include="Operations\Unary\ActgTests.cs" />

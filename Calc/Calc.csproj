@@ -45,6 +45,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinaryOperation.cs" />
+    <Compile Include="Factories\SortFactory.cs" />
+    <Compile Include="Operations\Sort\CombSort.cs" />
+    <Compile Include="Operations\Sort\GnomeSort.cs" />
+    <Compile Include="Operations\Sort\InsertionSort.cs" />
+    <Compile Include="Operations\Sort\PancakeSort.cs" />
+    <Compile Include="Operations\Sort\RadixSort.cs" />
+    <Compile Include="Operations\Sort\SleepSort.cs" />
+    <Compile Include="SortOperation.cs" />
     <Compile Include="Operations\Binary\DecimalDivide.cs" />
     <Compile Include="Operations\Binary\Log.cs" />
     <Compile Include="Operations\Binary\Max.cs" />
@@ -101,6 +109,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

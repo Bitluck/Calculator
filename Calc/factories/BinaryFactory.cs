@@ -29,7 +29,7 @@ namespace Calc.factories
                     return new Max();
                 case "Min":
                     return new Min();
-                default: throw new Exception("Unknown Operation!");
+                default: throw new Exception("Unknown Operation.");
             }
         }
     }

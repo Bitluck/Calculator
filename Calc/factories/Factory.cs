@@ -31,7 +31,7 @@ namespace Calc.factories
                     return new Ln();
 
                 default: 
-                    throw new Exception("Unknown Operation!");
+                    throw new Exception("Unknown Operation.");
             }
         }
     }
