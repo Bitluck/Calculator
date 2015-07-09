@@ -151,12 +151,15 @@ namespace Calc
             // txtResult
             // 
             this.txtResult.BackColor = System.Drawing.Color.Silver;
+            this.txtResult.CausesValidation = false;
+            this.txtResult.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtResult.Location = new System.Drawing.Point(12, 86);
             this.txtResult.Name = "txtResult";
             this.txtResult.ReadOnly = true;
             this.txtResult.Size = new System.Drawing.Size(288, 31);
             this.txtResult.TabIndex = 100;
+            this.txtResult.TabStop = false;
             this.txtResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // buttonTan

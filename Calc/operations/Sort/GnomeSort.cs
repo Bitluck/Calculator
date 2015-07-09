@@ -4,6 +4,15 @@ namespace Calc.Operations.Sort
 {
     public class GnomeSort : ISortOperation
     {
+        /// <summary>
+        /// Function of Gnome sort
+        /// </summary>
+        /// <param name="list">
+        /// Unsorted list
+        /// </param>
+        /// <returns>
+        /// Sorted list
+        /// </returns>
         public List<int> Calculate(List<int> list)
         {
             int i = 1;

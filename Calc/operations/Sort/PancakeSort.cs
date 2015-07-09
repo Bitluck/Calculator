@@ -5,6 +5,15 @@ namespace Calc.Operations.Sort
 {
     public class PancakeSort : ISortOperation
     {
+        /// <summary>
+        /// Function of Pancake sort
+        /// </summary>
+        /// <param name="list">
+        /// Unsorted list
+        /// </param>
+        /// <returns>
+        /// Sorted list
+        /// </returns>
         public List<int> Calculate(List<int> list)
         {
             if (list.Count < 2)
@@ -36,6 +45,18 @@ namespace Calc.Operations.Sort
             return result;
         }
 
+        /// <summary>
+        /// Function of sorting - The insert
+        /// </summary>
+        /// <param name="list">
+        /// Some list
+        /// </param>
+        /// <param name="length">
+        /// Length of list
+        /// </param>
+        /// <param name="num">
+        /// Iterator
+        /// </param>
         private static void Flip(List<Int32> list, int length, int num)
         {
             for (int i = 0; i < --num; i++)

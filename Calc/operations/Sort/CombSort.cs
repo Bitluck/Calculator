@@ -4,6 +4,15 @@ namespace Calc.Operations.Sort
 {
     public class CombSort : ISortOperation
     {
+        /// <summary>
+        /// Function of Comb sort
+        /// </summary>
+        /// <param name="list">
+        /// Unsorted list
+        /// </param>
+        /// <returns>
+        /// Sorted list
+        /// </returns>
         public List<int> Calculate(List<int> list)
         {
             double gap = list.Count;

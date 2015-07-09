@@ -7,6 +7,15 @@ namespace Calc
 {
     public class ValidateAndConvert
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="stringArgument">
+        /// 
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
         public double doubleValidate(string stringArgument)
         {
             double tmp = 0;
@@ -20,6 +29,15 @@ namespace Calc
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="stringArgument">
+        /// 
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
         public List<int> sortValidate(string stringArgument)
         {
             ValidateAndConvert convert = new ValidateAndConvert();
@@ -27,6 +45,15 @@ namespace Calc
             return resultList;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="stringArgument">
+        /// 
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
         public List<int> StringToList(string stringArgument)
         {
             char[] whiteSpaces = { ' ', ',', '.', '\t', '\r' };
@@ -35,6 +62,15 @@ namespace Calc
             return resultList;
         }
 
+         /// <summary>
+         /// 
+         /// </summary>
+         /// <param name="str">
+         /// 
+         /// </param>
+         /// <returns>
+         /// 
+         /// </returns>
         public int conv(string str)
         {
             int tmp = 0;
@@ -48,6 +84,15 @@ namespace Calc
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="listIntArgument">
+        /// 
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
         public string ListToString(List<int> listIntArgument)
         {
             string stringResult = "";

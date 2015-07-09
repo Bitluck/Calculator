@@ -4,6 +4,15 @@ namespace Calc.Operations.Sort
 {
     public class InsertionSort : ISortOperation
     {
+        /// <summary>
+        /// Function of Insertion sort
+        /// </summary>
+        /// <param name="list">
+        /// Unsorted list
+        /// </param>
+        /// <returns>
+        /// Sorted list
+        /// </returns>
         public List<int> Calculate(List<int> list)
         {
             var first = 0;
