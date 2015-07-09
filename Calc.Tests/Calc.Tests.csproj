@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\BinaryFactoryTests.cs" />
+    <Compile Include="Factories\FactoryTests.cs" />
+    <Compile Include="Factories\SortFactoryTests.cs" />
     <Compile Include="Operations\Binary\DecimalDivideTests.cs" />
     <Compile Include="Operations\Binary\DifferenceTests.cs" />
     <Compile Include="Operations\Binary\DivideTests.cs" />
@@ -81,9 +84,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Factories\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

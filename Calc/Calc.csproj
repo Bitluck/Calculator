@@ -44,13 +44,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BinaryOperation.cs" />
+    <Compile Include="Interfaces\BinaryOperation.cs" />
     <Compile Include="Factories\SortFactory.cs" />
     <Compile Include="Operations\Sort\CombSort.cs" />
     <Compile Include="Operations\Sort\GnomeSort.cs" />
     <Compile Include="Operations\Sort\InsertionSort.cs" />
     <Compile Include="Operations\Sort\PancakeSort.cs" />
-    <Compile Include="SortOperation.cs" />
+    <Compile Include="Interfaces\SortOperation.cs" />
     <Compile Include="Operations\Binary\DecimalDivide.cs" />
     <Compile Include="Operations\Binary\Log.cs" />
     <Compile Include="Operations\Binary\Max.cs" />
@@ -73,7 +73,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Operations\Binary\Multiply.cs" />
-    <Compile Include="Operation.cs" />
+    <Compile Include="Interfaces\Operation.cs" />
     <Compile Include="Operations\Binary\Pow.cs" />
     <Compile Include="Operations\Unary\Ctg.cs" />
     <Compile Include="Operations\Unary\Ln.cs" />
