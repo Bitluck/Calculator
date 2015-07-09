@@ -70,6 +70,7 @@ namespace Calc
             this.txtFirst.Size = new System.Drawing.Size(288, 31);
             this.txtFirst.TabIndex = 0;
             this.txtFirst.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtFirst.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtFirstKeyPress);
             // 
             // buttonSum
             // 
@@ -145,6 +146,7 @@ namespace Calc
             this.txtSecond.Size = new System.Drawing.Size(288, 31);
             this.txtSecond.TabIndex = 1;
             this.txtSecond.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSecond.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSecondKeyPress);
             // 
             // txtResult
             // 

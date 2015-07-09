@@ -67,12 +67,29 @@ namespace Calc
                     e.Handled = true;
             }
         }*/
-        
+
+        private void TxtFirstKeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != ',') && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != '-') && (e.KeyChar != ' '))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtSecondKeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != ',') && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != '-') && (e.KeyChar != ' '))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void UnaryOperation(object sender, EventArgs e)
         {
             var calculatorName = ((Button) sender).Name.Substring(6);
             var calculator = Factory.CreateCalculator(calculatorName);
-            var argument = Double.Parse(txtFirst.Text);
+            ValidateAndConvert validateConvert = new ValidateAndConvert();
+            var argument = validateConvert.doubleValidate(txtFirst.Text);
             txtResult.Text = calculator.Calculate(argument).ToString();
         }
 
@@ -80,8 +97,9 @@ namespace Calc
         {
             var calculatorName = ((Button)sender).Name.Substring(6);
             var calculator = BinaryFactory.CreateBinaryCalculator(calculatorName);
-            var firstArgument = Double.Parse(txtFirst.Text);
-            var secondArgument = Double.Parse(txtSecond.Text);
+            ValidateAndConvert validateConvert = new ValidateAndConvert();
+            var firstArgument = validateConvert.doubleValidate(txtFirst.Text);
+            var secondArgument = validateConvert.doubleValidate(txtSecond.Text);
             txtResult.Text = calculator.Calculate(firstArgument, secondArgument).ToString();
         }
 
@@ -90,29 +108,10 @@ namespace Calc
             var calculatorName = ((Button) sender).Name.Substring(6);
             var calculator = SortFactory.CreateSortCalculator(calculatorName);
             var stringListOfArguments = txtFirst.Text;
-            List<Int32> argument = StringToList(stringListOfArguments);
+            ValidateAndConvert convert = new ValidateAndConvert();
+            List<int> argument = convert.StringToList(stringListOfArguments);
             calculator.Calculate(argument);
-            txtResult.Text = ListToString(argument);
-        }
-
-        private List<Int32> StringToList(String stringArgument)
-        {
-            char[] whiteSpaces = { ' ', ',', '.', '\t', '\r', '\x00a0', '\x0085'};
-            List<Int32> resultList = stringArgument.Split(whiteSpaces, StringSplitOptions.RemoveEmptyEntries)
-                .Select(str => Convert.ToInt32(str)).ToList();
-            return resultList;
-        }
-
-        private string ListToString(List<Int32> listIntArgument)
-        {
-            string stringResult = "";
-            for (int i = 0; i < listIntArgument.Count; ++i)
-            {
-                stringResult += listIntArgument[i].ToString();
-                if (i != listIntArgument.Count-1)
-                    stringResult += ", ";
-            }
-            return stringResult;
+            txtResult.Text = convert.ListToString(argument);
         }
 
         private void MainFormLoad(object sender, EventArgs e)
