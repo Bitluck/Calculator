@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Calc.Operations.Sort
 {
     public class CombSort : ISortOperation
     {
-        public void Calculate(List<Int32> list)
+        public List<int> Calculate(List<int> list)
         {
             double gap = list.Count;
             bool swaps = true;
@@ -28,6 +27,8 @@ namespace Calc.Operations.Sort
                     i++;
                 }
             }
+            List<int> result = list;
+            return result;
         }
     }
 }

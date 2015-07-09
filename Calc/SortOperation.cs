@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Calc
 {
     public interface ISortOperation
     {
-        void Calculate(List<Int32> argument);
+        List<int> Calculate(List<int> argument);
     }
 }

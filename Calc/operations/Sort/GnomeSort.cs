@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Calc.Operations.Sort
 {
     public class GnomeSort : ISortOperation
     {
-        public void Calculate(List<Int32> list)
+        public List<int> Calculate(List<int> list)
         {
             int i = 1;
             int j = 2;
@@ -30,6 +29,8 @@ namespace Calc.Operations.Sort
                     }
                 }
             }
+            List<int> result = list;
+            return result;
         }
     }
 }

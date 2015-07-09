@@ -5,11 +5,11 @@ namespace Calc.Operations.Sort
 {
     public class PancakeSort : ISortOperation
     {
-        public void Calculate(List<Int32> list)
+        public List<int> Calculate(List<int> list)
         {
             if (list.Count < 2)
             {
-                return;
+                return list;
             }
             int i, a, max_num_pos;
             for (i = list.Count; i > 1; i--)
@@ -32,6 +32,8 @@ namespace Calc.Operations.Sort
                 }
                 Flip(list, list.Count, i);
             }
+            List<int> result = list;
+            return result;
         }
 
         private static void Flip(List<Int32> list, int length, int num)

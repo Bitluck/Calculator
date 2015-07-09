@@ -3,12 +3,12 @@ using NUnit.Framework;
 
 namespace Calc.Tests.Operations.Sort
 {
-    class PancakeSortTests : SortTests
+    class GnomeSortTests : SortTests
     {
         [SetUp]
-        public void PancakeSetUp()
+        public void GnomeSetUp()
         {
-            Sorter = new PancakeSort();
+            Sorter = new GnomeSort();
         }
     }
 }

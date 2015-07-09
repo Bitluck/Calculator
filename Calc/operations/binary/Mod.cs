@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Calc.operations.binary
+﻿namespace Calc.operations.binary
 {
     public class Mod : IBinaryOperation
     {

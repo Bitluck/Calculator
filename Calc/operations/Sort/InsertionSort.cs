@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Calc.Operations.Sort
 {
     public class InsertionSort : ISortOperation
     {
-        public void Calculate(List<Int32> list)
+        public List<int> Calculate(List<int> list)
         {
             var first = 0;
             var last = list.Count - 1;
@@ -19,6 +18,8 @@ namespace Calc.Operations.Sort
 
                 list[j] = entry;
             }
+            List<int> result = list;
+            return result;
         }
     }
 }

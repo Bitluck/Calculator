@@ -1,5 +1,4 @@
-﻿using System;
-using Calc.operations.unary;
+﻿using Calc.operations.unary;
 using NUnit.Framework;
 
 namespace Calc.Tests.Operations.Unary

@@ -50,8 +50,6 @@
     <Compile Include="Operations\Sort\GnomeSort.cs" />
     <Compile Include="Operations\Sort\InsertionSort.cs" />
     <Compile Include="Operations\Sort\PancakeSort.cs" />
-    <Compile Include="Operations\Sort\RadixSort.cs" />
-    <Compile Include="Operations\Sort\SleepSort.cs" />
     <Compile Include="SortOperation.cs" />
     <Compile Include="Operations\Binary\DecimalDivide.cs" />
     <Compile Include="Operations\Binary\Log.cs" />

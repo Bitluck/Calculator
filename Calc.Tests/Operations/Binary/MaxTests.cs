@@ -1,8 +1,4 @@
-﻿using System;
-using Calc.operations.binary;
-using NUnit.Framework;
-
-namespace Calc.Tests.Operations.Binary
+﻿namespace Calc.Tests.Operations.Binary
 {
     class MaxTests
     {
