@@ -2,7 +2,7 @@ language: csharp
 solution: Calc.sln
 mono: 5.2.0
 before_install:
-  -sudo apt-get install nunit-console
+  - sudo apt-get install nunit-console
 before_script:
   - nuget restore Calc.sln
 after_script:
