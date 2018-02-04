@@ -1,2 +1,8 @@
 language: csharp
 solution: Calc.sln
+install:
+  - nuget restre Calc.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Release Calc.sln
+  - mono ./testrunner/NUnit.Runner.2.6.4/tools/nunit-console.exe ./Calculator/Calc.Tests/bin/Release/Calc.Tests.dll
