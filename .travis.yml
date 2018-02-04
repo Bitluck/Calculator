@@ -1,7 +1,7 @@
 language: csharp
 solution: Calc.sln
 install:
-  - nuget restre Calc.sln
+  - nuget restore Calc.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release Calc.sln
