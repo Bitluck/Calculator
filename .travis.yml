@@ -1,8 +1,9 @@
 language: csharp
 solution: Calc.sln
-install:
+mono: 5.2.0
+before_install:
+  -sudo apt-get install nunit-console
+before_script:
   - nuget restore Calc.sln
-  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
-script:
-  - xbuild /p:Configuration=Release Calc.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Calculator/Calc.Tests/bin/Release/Calc.Tests.dll
+after_script:
+  - nunit-console ./Calculator/Calc.Tests/bin/Release/Calc.Tests.dll
