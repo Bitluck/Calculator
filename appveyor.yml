@@ -1,18 +1,18 @@
 version: 1.0.{build}
 
 install:
-    - nuget restore
+  - nuget restore
 
 build:
   project: Calc.sln
   verbosity: detailed
 
 environment:
-    COVERALLS_REPO_TOKEN:  
-       secure: ybaVTwokoDe5aIFj3RF2Aea5999hmNS7zaLNnSSy0tJkaC+3SJ3MpBbeTVZqF3q+
+  COVERALLS_REPO_TOKEN:  
+    secure: b7577bRaOs3mFdYlr8nRoHhJHDXYzNPZT6EizY0h2cG+FgLvFMnjYWJx/9lhQS3U
 
-after_test: 
-    - packages\OpenCover.4.5.3522\OpenCover.Console.exe -register:user -filter:"+[*]*" -target:"packages\NUnit.Runners.2.6.4\tools\nunit-console.exe" -targetargs:"/noshadow /domain:single C:\projects\calculator\Calc.Tests\bin\Debug\Calc.Tests.dll" -output:coverage.xml
+after_test:
+  - packages\OpenCover.4.5.3522\OpenCover.Console.exe -register:user -filter:"+[*]*" -target:"packages\NUnit.Runners.2.6.4\tools\nunit-console.exe" -targetargs:"/noshadow /domain:single Calc.Tests\bin\debug\Calc.Tests.dll" -output:coverage.xml
 
-    - packages\coveralls.io.1.1.86\tools\coveralls.net.exe --opencover coverage.xml
+  - packages\coveralls.io.1.1.86\tools\coveralls.net.exe --opencover coverage.xml
     
