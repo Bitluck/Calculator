@@ -1,7 +1,5 @@
 version: 1.0.{build}
 
-image: Visual Studio 2015
-
 install:
   - nuget restore
   - choco install opencover.portable
