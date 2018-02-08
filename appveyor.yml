@@ -14,5 +14,5 @@ environment:
     secure: b7577bRaOs3mFdYlr8nRoHhJHDXYzNPZT6EizY0h2cG+FgLvFMnjYWJx/9lhQS3U
 
 test_script:
-  - OpenCover.Console.exe -register:user target:"packages\NUnit.Runners.2.6.4\tools\nunit-console.exe" -targetargs:".\Calc.Tests\bin\Debug\Calc.Tests.dll -noshadow" -filter:"+[UnitTestTargetProject*]* -[Calc.Tests*]*" -output:".\coverage.xml"
+  - OpenCover.Console.exe -register:user -target:"packages\NUnit.Runners.2.6.4\tools\nunit-console.exe" -targetargs:".\Calc.Tests\bin\Debug\Calc.Tests.dll -noshadow" -filter:"+[UnitTestTargetProject*]* -[Calc.Tests*]*" -output:".\coverage.xml"
   - codecov -f "coverage.xml"
