@@ -17,4 +17,4 @@ environment:
 
 test_script:
   - OpenCover.Console.exe -register:user -target:"%xunit20%\xunit.console.x86.exe" -targetargs:".\Calc.Tests\bin\Debug\Calc.Tests.dll -noshadow" -filter:"+[UnitTestTargetProject*]* -[Calc.Tests*]*" -output:".\coverage.xml"
-  - codecov -f "coverage.xml
+  - codecov -f "coverage.xml"
