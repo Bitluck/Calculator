@@ -14,7 +14,6 @@ build:
 environment:
   COVERALLS_REPO_TOKEN:  
     secure: b7577bRaOs3mFdYlr8nRoHhJHDXYzNPZT6EizY0h2cG+FgLvFMnjYWJx/9lhQS3U
-  CODECOV_TOKEN="cf7fddbf-45c0-430c-a291-eb8e7b5a16dc"
 
 test_script:
   - OpenCover.Console.exe -register:user -target:"%xunit20%\xunit.console.x86.exe" -targetargs:".\Calc.Tests\bin\Debug\Calc.Tests.dll -noshadow" -filter:"+[UnitTestTargetProject*]* -[Calc.Tests*]*" -output:".\coverage.xml"
